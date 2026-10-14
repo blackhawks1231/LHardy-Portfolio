@@ -1,0 +1,494 @@
+
+/* 1. Set the overall font and page colors */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #F7F5FF;
+  color: #28243D;
+  line-height: 1.6;
+}
+
+/* 2. Style the navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #FFFFFF;
+}
+
+nav a {
+  margin-left: 18px;
+  color: #6C55D9;
+  text-decoration: none;
+}
+
+/* 3. Style the welcome section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #E7DEFF, #F7F5FF);
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+/* Welcome section: text left, photo right */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #E7DEFF, #F7F5FF);
+}
+
+/* Text content */
+.hero-content {
+  flex: 1;
+  max-width: 550px;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  color: #5140B5;
+  margin-top: 0;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #28243D;
+  margin-bottom: 28px;
+}
+
+/* Picture container */
+.hero-image {
+  flex: 0 1 350px;
+  text-align: center;
+}
+
+/* Decorative portrait */
+.profile-picture {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+  border: 8px solid #C8B5FF;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(81, 64, 181, 0.18);
+  box-sizing: border-box;
+}
+
+/* Button */
+.hero-content .button {
+  display: inline-block;
+  padding: 14px 24px;
+  background-color: #6C55D9;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.2s ease;
+}
+
+.hero-content .button:hover {
+  background-color: #5140B5;
+}
+
+/* Mobile layout */
+@media (max-width: 650px) {
+  .hero {
+    flex-direction: column-reverse;
+    gap: 30px;
+    padding: 45px 7%;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-image {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .profile-picture {
+    max-width: 230px;
+  }
+}
+/* 4. Style the button */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #6C55D9;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* 5. Give each content section room */
+section {
+  padding: 50px 8%;
+}
+
+/* 6. Arrange project cards */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  padding: 24px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #00000010;
+}
+
+.project-one {
+    background-image: url("DL_Wedding-210.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Keep the text readable and the tile clickable */
+.project-one .project-card-link {
+    display: block;
+    height: 100%;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.45);
+    box-sizing: border-box;
+}
+
+.project-one:hover {
+    transform: translateY(-5px);
+}
+
+.cool-kids-card .project-card-link {
+    display: block;
+    height: 100%;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.project-card-link:hover {
+    cursor: pointer;
+}
+
+.project-card:has(.project-card-link) {
+    padding: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:has(.project-card-link):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-visit {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.cool-kids-card {
+    background-image: url("Icon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* 7. Center the footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #28243D;
+  color: #FFFFFF;
+}
+
+/* 8. Make the layout mobile-friendly */
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+/* Contact section */
+#contact {
+  background-color: #F7F5FF;
+  text-align: center;
+}
+
+/* Contact form container */
+.contact-form {
+  max-width: 550px;
+  margin: 30px auto 0;
+  padding: 30px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(40, 36, 61, 0.10);
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Form labels */
+.contact-form label {
+  display: block;
+  margin: 16px 0 6px;
+  color: #28243D;
+  font-weight: bold;
+}
+
+/* Text fields */
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #D8D0F0;
+  border-radius: 8px;
+  background-color: #FCFBFF;
+  color: #28243D;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+/* Highlight fields when selected */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #8A7BC8;
+  border-color: #6C55D9;
+}
+
+/* Allow the message box to resize vertically */
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Send button */
+.contact-button {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6C55D9;
+  color: #FFFFFF;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #5140B5;
+}
+
+/* Mobile-friendly spacing */
+@media (max-width: 650px) {
+  .contact-form {
+    padding: 20px;
+  }
+}
+
+/* Projects page introduction */
+.projects-hero {
+  text-align: center;
+  padding: 65px 8%;
+  background: linear-gradient(135deg, #E7DEFF, #F7F5FF);
+}
+
+.projects-hero h1 {
+  font-size: 42px;
+  margin-top: 0;
+  color: #28243D;
+}
+
+.projects-hero p {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Projects gallery */
+.projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  padding: 50px 8%;
+  background-color: #F7F5FF;
+  align-items: stretch;
+}
+
+/* Individual project cards */
+.project-detail-card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(40, 36, 61, 0.10);
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.project-detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(40, 36, 61, 0.15);
+}
+
+/* Project images */
+.project-preview {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+/* Project descriptions */
+.project-detail-content {
+  padding: 24px;
+}
+
+.project-detail-content h2 {
+  margin-top: 0;
+  color: #28243D;
+}
+
+.project-tags {
+  color: #6C55D9;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* Reuse the purple button theme */
+.project-detail-content .button {
+  background-color: #6C55D9;
+  color: #FFFFFF;
+}
+
+.project-detail-content .button:hover,
+.projects-contact .button:hover {
+  background-color: #5140B5;
+}
+
+/* Contact invitation */
+.projects-contact {
+  text-align: center;
+  padding: 45px 8% 60px;
+  background-color: #FFFFFF;
+}
+
+.projects-contact h2 {
+  color: #28243D;
+}
+
+/* Responsive layout */
+@media (max-width: 650px) {
+  .projects-gallery {
+    grid-template-columns: 1fr;
+    padding: 30px 6%;
+  }
+
+  .projects-hero h1 {
+    font-size: 32px;
+  }
+
+  .project-preview {
+    height: 200px;
+  }
+}
+
+/* About page introduction */
+.about-hero {
+  text-align: center;
+  padding: 65px 8%;
+  background-image: url("DL_Wedding-257.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-hero h1 {
+  font-size: 42px;
+  color: black;
+  margin-top: 0;
+}
+
+/* About page layout */
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 8%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Individual paragraph cards */
+.about-card {
+  padding: 28px;
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(40, 36, 61, 0.08);
+  border-top: 4px solid #8A7BC8;
+}
+
+.about-card h2 {
+  color: #6C55D9;
+  margin-top: 0;
+}
+
+.about-card p {
+  color: #28243D;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* Contact invitation */
+.about-contact {
+  text-align: center;
+  padding: 45px 8% 60px;
+  background-color: #FFFFFF;
+}
+
+.about-contact h2 {
+  color: #28243D;
+}
+
+/* Mobile layout */
+@media (max-width: 650px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    padding: 30px 6%;
+  }
+
+  .about-hero h1 {
+    font-size: 32px;
+  }
+}
